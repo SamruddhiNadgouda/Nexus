@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import com.nexus.entities.User;
-import com.nexus.forms.UserForm;
 
 public interface UserService {
     User saveUser(User user);
@@ -20,6 +19,8 @@ public interface UserService {
     boolean isUserExistByEmail(String email);
 
     List<User> getAllUsers();
-
+    User getUserByEmail(String email);
     // add more methods related to user services`
+
+    public User findByEmail(String username);
 }

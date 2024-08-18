@@ -3,7 +3,9 @@ package com.nexus.controllers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.nexus.services.UserService;
@@ -16,28 +18,29 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+   
 
-    // user dashbaord page
+    // User dashboard page
     @RequestMapping(value = "/dashboard")
-    public String userDashbaord() {
+    public String userDashboard() {
         System.out.println("User Dashboard");
         return "user/dashboard";
     }
 
-    // user profile page
+    // User profile page
     @RequestMapping(value = "/profile")
-    public String userProfile() {
-        System.out.println("User Profile");
+    public String userProfile(Model model,Authentication authentication) {
+       
         return "user/profile";
     }
 
-    // user add contacts page
+    // User add contacts page
 
-    // user view contacts
+    // User view contacts
 
-    // user edit contact
+    // User edit contact
 
-    // user delete contact
+    // User delete contact
 
-    // user search contact
+    // User search contact
 }

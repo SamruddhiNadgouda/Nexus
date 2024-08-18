@@ -15,5 +15,6 @@ public class Message {
 
     private String content;
     @Builder.Default
-    private MessgeType type = MessgeType.blue;
+    private MessgeType type = MessgeType.blue; // Corrected enum reference
+
 }
